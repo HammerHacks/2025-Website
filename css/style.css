@@ -38,6 +38,16 @@ body{
 
 }
 
+.glowing-text{
+   color: black;
+   text-shadow:
+   0 0 5px #fff, 
+   0 0 10px #0073e6, 
+   0 0 20px #0073e6,
+   0 0 30px #0073e6,
+   0 0 40px #0073e6;
+}
+
 .logo img{
     height: 50px;
     width: auto;
@@ -51,6 +61,27 @@ body{
   position: relative;
   text-align: center;
   font-family: "Nunito", "lora";
+}
+
+ .signature-img {
+    max-width: 300px; 
+    height: auto; 
+    margin-top: 20px; 
+  }
+
+ @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+.slide-in {
+  animation: slideIn 2s ease-in-out forwards;
 }
 
 .credits{

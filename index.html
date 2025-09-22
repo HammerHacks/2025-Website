@@ -16,6 +16,27 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+  .team-member-img {
+    width: 5rem;
+    height: 5rem;
+    transition: border-color 0.2s, transform 0.3s;
+    border-radius: 9999px;
+    object-fit: cover;
+    border-width: 4px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+    border-color: #fff !important;
+    display: block;
+  }
+  .team-member-img:hover {
+    border-color: #f4802e !important;
+    transform: scale(1.2);
+  }
+</style>
 </head>
 <body>
   <body class="main">
@@ -23,24 +44,24 @@
   
     <div class="logo pl-6 pr-4 flex items-center">
       <a href="index.html">
-        <img src="assets/logo.jpeg" alt="Hammer Hacks Logo"
+        <img src="assets/logo.webp" alt="Hammer Hacks Logo"
           class="h-14 w-auto max-w-[160px] transition-transform duration-300 hover:scale-105 drop-shadow-md rounded-md" />
        </a>
     </div>
 
-    <button class="text-2xl relative right-0 hover:bg-gray-300 h-25 w-30">
+    <button class="text-2xl relative right-0 hover:bg-gray-300 h-25 w-30" data-scroll="about-section">
       About
     </button>
-    <button class="text-2xl relative rigth-0 hover:bg-gray-300 h-25 w-30">
+    <button class="text-2xl relative rigth-0 hover:bg-gray-300 h-25 w-30" data-scroll="sponsors-section">
       Sponsors
     </button>
-    <button class="text-2xl relative left-0 hover:bg-gray-300 h-25 w-30">
+    <button class="text-2xl relative left-0 hover:bg-gray-300 h-25 w-30" data-scroll="schedule-section">
       Schedule
     </button>
-    <button class="text-2xl relative left-0 hover:bg-gray-300 h-25 w-30">
+    <button class="text-2xl relative left-0 hover:bg-gray-300 h-25 w-30" data-scroll="faq-section">
       FAQ
     </button>
-    <button class="text-2xl relative left-0 hover:bg-gray-300 h-25 w-30">
+    <button class="text-2xl relative left-0 hover:bg-gray-300 h-25 w-30" data-scroll="team-section">
       Team
     </button>
     <button class="text-2xl relative left-0 hover:bg-gray-300 h-25 w-30">
@@ -52,13 +73,13 @@
   </div>
   <div class="homepage">
     <div class="mx-auto w-auto">
-        <img src="assets/logo.jpeg" alt="Hammer Hacks Logo"
+        <img src="assets/logo.webp" alt="Hammer Hacks Logo"
           class="h-50 w-50 my-20 mx-auto" />
        </a>
       <div class="relative bottom-15">
         <h1 class="text-4xl font-bold text-yellow-500">A High School Hackathon where you can present your amazing ideas with technology!</h1>
-        <h1 class="text-4xl font-bold">??? 2026</h1>
-        <h1 class="text-4xl font-bold">Location ???</h1>
+        <h1 class="text-4xl font-bold">Winter 2026</h1>
+        <h1 class="text-4xl font-bold">Hamilton, Ontario</h1>
       </div>
 
       <div class="bg-white text-black max-w-300 w-auto mx-auto shadow-md rounded-2xl border-gray-400 border-4" id="AboutUs">
@@ -86,7 +107,7 @@
     
   </div>
   <div class="team">
-    <!-- team sect start -->
+    <!-- team section start -->
     <section class="flex flex-row w-full h-[600px] bg-gray-100 mt-12" id="team-section">
       <!-- description on left -->
       <div class="w-1/2 flex items-center justify-center">
@@ -109,52 +130,84 @@
         <div class="grid grid-cols-4 grid-rows-4 gap-6">
           <!-- adjust src and data description as needed -->
           <div class="flex items-center justify-center">
-            <img src="assets/SelenaNguyen.png" alt="Member 1" class="w-20 h-20 rounded-full object-cover border-4 border-white shadow-lg cursor-pointer team-member" data-desc="<strong>Selena Nguyen</strong><br>Lead Organizer. Likes → Celeste & Hollow Knight ❤️<br>Grade 12 @ Orchard Park SS" />
+            <a href="https://www.linkedin.com/in/selena-nguyen-0b7287321/" target="_blank" rel="noopener noreferrer">
+              <img src="assets/SelenaNguyen.png" alt="Member 1" class="team-member-img team-member" data-desc="<strong>Selena Nguyen</strong><br>Lead Organizer. Likes → Celeste & Hollow Knight ❤️<br>Grade 12 @ Orchard Park SS" />
+            </a>
           </div>
           <div class="flex items-center justify-center">
-            <img src="assets/logo.jpeg" alt="Member 2" class="w-20 h-20 rounded-full object-cover border-4 border-white shadow-lg cursor-pointer team-member" data-desc="<strong>Maisy Thomas</strong><br>Lead Organizer. Likes → [blank]<br>Grade 12 @ St. Mary SS" />
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <img src="assets/logo.webp" alt="Member 2" class="team-member-img team-member" data-desc="<strong>Maisy Thomas</strong><br>Lead Organizer. Likes → [blank]<br>Grade 12 @ St. Mary SS" />
+            </a>
           </div>
           <div class="flex items-center justify-center">
-            <img src="assets/logo.jpeg" alt="Member 3" class="w-20 h-20 rounded-full object-cover border-4 border-white shadow-lg cursor-pointer team-member" data-desc="<strong>David Cosma</strong><br>Lead Web Developer. Likes → [blank]<br>Grade 12 @ Westmount SS" />
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <img src="assets/logo.webp" alt="Member 3" class="team-member-img team-member" data-desc="<strong>David Cosma</strong><br>Lead Web Developer. Likes → [blank]<br>Grade 12 @ Westmount SS" />
+            </a>
           </div>
           <div class="flex items-center justify-center">
-            <img src="assets/AaronDam.jpeg" alt="Member 4" class="w-20 h-20 rounded-full object-cover border-4 border-white shadow-lg cursor-pointer team-member" data-desc="<strong>Aaron Dam</strong><br>Web Developer. Likes → Rhythm Games & Pokémon 🎮<br>Grade 12 @ Westmount SS" />
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <img src="assets/AaronDam.jpeg" alt="Member 4" class="team-member-img team-member" data-desc="<strong>Aaron Dam</strong><br>Web Developer. Likes → Rhythm Games & Food 🎵<br>Grade 12 @ Westmount SS" />
+            </a>
           </div>
           <div class="flex items-center justify-center">
-            <img src="assets/Unimashi.jpg" alt="Member 5" class="w-20 h-20 rounded-full object-cover border-4 border-white shadow-lg cursor-pointer team-member" data-desc="<strong>Unimashi Ugor</strong><br>Web Developer. Likes → Roller Coasters, Computer Systems & Retro Gaming 🧑‍💻<br>Grade 11 @ Bishop Ryan CSS" />
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <img src="assets/Unimashi.jpg" alt="Member 5" class="team-member-img team-member" data-desc="<strong>Unimashi Ugor</strong><br>Web Developer. Likes → Roller Coasters, Computer Systems & Retro Gaming 🧑‍💻<br>Grade 11 @ Bishop Ryan CSS" />
+            </a>
           </div>
           <div class="flex items-center justify-center">
-            <img src="assets/JasmineMontrichard.jpeg" alt="Member 6" class="w-20 h-20 rounded-full object-cover border-4 border-white shadow-lg cursor-pointer team-member" data-desc="<strong>Jasmine Montrichard</strong><br>Logistics Lead. Likes → [blank]<br>Prev. @ St. Jean Brebeuf CSS" />
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <img src="assets/JasmineMontrichard.jpeg" alt="Member 6" class="team-member-img team-member" data-desc="<strong>Jasmine Montrichard</strong><br>Logistics Lead. Likes → [blank]<br>Prev. @ St. Jean Brebeuf CSS" />
+            </a>
           </div>
           <div class="flex items-center justify-center">
-            <img src="assets/logo.jpeg" alt="Member 7" class="w-20 h-20 rounded-full object-cover border-4 border-white shadow-lg cursor-pointer team-member" data-desc="<strong>Gabriel Tsui</strong><br>Logistics Coordinator. Likes → [blank]<br>Grade 11 @ St. Mary CSS" />
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <img src="assets/logo.webp" alt="Member 7" class="team-member-img team-member" data-desc="<strong>Gabriel Tsui</strong><br>Logistics Coordinator. Likes → [blank]<br>Grade 11 @ St. Mary CSS" />
+            </a>
           </div>
           <div class="flex items-center justify-center">
-            <img src="assets/logo.jpeg" alt="Member 16" class="w-20 h-20 rounded-full object-cover border-4 border-white shadow-lg cursor-pointer team-member" data-desc="<strong>Jacob</strong><br>Logistics Coordinator. Likes → [blank]<br>Grade 12 @ Bishop Ryan CSS" />
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <img src="assets/logo.webp" alt="Member 16" class="team-member-img team-member" data-desc="<strong>Jacob</strong><br>Logistics Coordinator. Likes → [blank]<br>Grade 12 @ Bishop Ryan CSS" />
+            </a>
           </div>
           <div class="flex items-center justify-center">
-            <img src="assets/logo.jpeg" alt="Member 8" class="w-20 h-20 rounded-full object-cover border-4 border-white shadow-lg cursor-pointer team-member" data-desc="<strong>Joel Mathews</strong><br>Operations Lead. Likes → [blank]<br>Grade 12 @ Westmount SS" />
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <img src="assets/logo.webp" alt="Member 8" class="team-member-img team-member" data-desc="<strong>Joel Mathews</strong><br>Operations Lead. Likes → [blank]<br>Grade 12 @ Westmount SS" />
+            </a>
           </div>
           <div class="flex items-center justify-center">
-            <img src="assets/logo.jpeg" alt="Member 9" class="w-20 h-20 rounded-full object-cover border-4 border-white shadow-lg cursor-pointer team-member" data-desc="<strong>Sam Dallaway</strong><br> Operations Coordinator. Likes → [blank]<br>Grade 12 @ Orchard Park SS" />
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <img src="assets/logo.webp" alt="Member 9" class="team-member-img team-member" data-desc="<strong>Sam Dallaway</strong><br> Operations Coordinator. Likes → [blank]<br>Grade 12 @ Orchard Park SS" />
+            </a>
           </div>
           <div class="flex items-center justify-center">
-            <img src="assets/logo.jpeg" alt="Member 10" class="w-20 h-20 rounded-full object-cover border-4 border-white shadow-lg cursor-pointer team-member" data-desc="<strong>Rosan Syal</strong><br>Operations Coordinator. Likes → [blank]<br>Grade 11 @ Rosan Syal" />
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <img src="assets/logo.webp" alt="Member 10" class="team-member-img team-member" data-desc="<strong>Rosan Syal</strong><br>Operations Coordinator. Likes → [blank]<br>Grade 11 @ Rosan Syal" />
+            </a>
           </div>
           <div class="flex items-center justify-center">
-            <img src="assets/logo.jpeg" alt="Member 11" class="w-20 h-20 rounded-full object-cover border-4 border-white shadow-lg cursor-pointer team-member" data-desc="<strong>Sukh Chana</strong><br>Marketing Lead. Likes → [blank]<br>Grade 12 @ Orchard Park SS" />
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <img src="assets/logo.webp" alt="Member 11" class="team-member-img team-member" data-desc="<strong>Sukh Chana</strong><br>Marketing Lead. Likes → [blank]<br>Grade 12 @ Orchard Park SS" />
+            </a>
           </div>
           <div class="flex items-center justify-center">
-            <img src="assets/logo.jpeg" alt="Member 12" class="w-20 h-20 rounded-full object-cover border-4 border-white shadow-lg cursor-pointer team-member" data-desc="<strong>Cameron Jacka</strong><br>Marketing Coordinator. Likes → [blank]<br>Grade 12 @ St. Mary CSS" />
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <img src="assets/logo.webp" alt="Member 12" class="team-member-img team-member" data-desc="<strong>Cameron Jacka</strong><br>Marketing Coordinator. Likes → [blank]<br>Grade 12 @ St. Mary CSS" />
+            </a>
           </div>
           <div class="flex items-center justify-center">
-            <img src="assets/logo.jpeg" alt="Member 13" class="w-20 h-20 rounded-full object-cover border-4 border-white shadow-lg cursor-pointer team-member" data-desc="<strong>Marinel Gomez</strong><br>Marketing Coordinator. Likes → [blank]<br>Grade 10 @ St. Thomas More CSS" />
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <img src="assets/logo.webp" alt="Member 13" class="team-member-img team-member" data-desc="<strong>Marinel Gomez</strong><br>Marketing Coordinator. Likes → [blank]<br>Grade 10 @ St. Thomas More CSS" />
+            </a>
           </div>
           <div class="flex items-center justify-center">
-            <img src="assets/logo.jpeg" alt="Member 14" class="w-20 h-20 rounded-full object-cover border-4 border-white shadow-lg cursor-pointer team-member" data-desc="<strong>Alexandra Lima</strong><br>Finance Lead. Likes → [blank]<br>Grade 12 @ St. Thomas More CSS" />
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <img src="assets/logo.webp" alt="Member 14" class="team-member-img team-member" data-desc="<strong>Alexandra Lima</strong><br>Finance Lead. Likes → [blank]<br>Grade 12 @ St. Thomas More CSS" />
+            </a>
           </div>
           <div class="flex items-center justify-center">
-            <img src="assets/logo.jpeg" alt="Member 15" class="w-20 h-20 rounded-full object-cover border-4 border-white shadow-lg cursor-pointer team-member" data-desc="<strong>Nand Shah</strong><br>Finance Coordinator. Likes → Basketball & Hockey ⛹️<br>Grade 11 @ Westmount SS" />
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+              <img src="assets/logo.webp" alt="Member 15" class="team-member-img team-member" data-desc="<strong>Nand Shah</strong><br>Finance Coordinator. Likes → Basketball & Hockey ⛹️<br>Grade 11 @ Westmount SS" />
+            </a>
           </div>
         </div>
       </div>
@@ -176,31 +229,43 @@
       </div>
   </div>
   <script>
-    // hover logic for team members
-    document.querySelectorAll('.team-member').forEach(function(img) {
-      img.addEventListener('mouseenter', function() {
-        // parsing
-        var desc = img.getAttribute('data-desc');
-        var tempDiv = document.createElement('div');
-        tempDiv.innerHTML = desc;
-        var name = tempDiv.querySelector('strong') ? tempDiv.querySelector('strong').innerText : '';
-        var lines = desc.split('<br>');
-        var role = lines[1] ? lines[1].split('.')[0] : '';
-        var bio = lines[1] ? lines[1].substring(lines[1].indexOf('.')+1).trim() : '';
-        var school = lines[2] ? lines[2].trim() : '';
-        document.getElementById('team-desc-name').innerText = name;
-        document.getElementById('team-desc-role').innerText = role;
-        document.getElementById('team-desc-school').innerText = school;
-        document.getElementById('team-desc-bio').innerText = bio;
-      });
-      img.addEventListener('mouseleave', function() {
-        document.getElementById('team-desc-name').innerText = 'Hover over a team member';
-        document.getElementById('team-desc-role').innerText = 'to see their role.';
-        document.getElementById('team-desc-school').innerText = 'School info will appear here.';
-        document.getElementById('team-desc-bio').innerText = 'Their interests will appear here.';
-      });
+  // smooth scroll for buttons with data-scroll
+  document.querySelectorAll('button[data-scroll]').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      var targetId = btn.getAttribute('data-scroll');
+      var target = document.getElementById(targetId);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
     });
-  </script>
+  });
+
+  // hover logic for team members
+  document.querySelectorAll('.team-member').forEach(function(img) {
+    img.addEventListener('mouseenter', function() {
+      // parsing
+      var desc = img.getAttribute('data-desc');
+      var tempDiv = document.createElement('div');
+      tempDiv.innerHTML = desc;
+      var name = tempDiv.querySelector('strong') ? tempDiv.querySelector('strong').innerText : '';
+      var lines = desc.split('<br>');
+      var role = lines[1] ? lines[1].split('.')[0] : '';
+      var bio = lines[1] ? lines[1].substring(lines[1].indexOf('.')+1).trim() : '';
+      var school = lines[2] ? lines[2].trim() : '';
+      document.getElementById('team-desc-name').innerText = name;
+      document.getElementById('team-desc-role').innerText = role;
+      document.getElementById('team-desc-school').innerText = school;
+      document.getElementById('team-desc-bio').innerText = bio;
+    });
+    img.addEventListener('mouseleave', function() {
+      document.getElementById('team-desc-name').innerText = 'Hover over a team member';
+      document.getElementById('team-desc-role').innerText = 'to see their role.';
+      document.getElementById('team-desc-school').innerText = 'School info will appear here.';
+      document.getElementById('team-desc-bio').innerText = 'Their interests will appear here.';
+    });
+  });
+</script>
 </body>
 </html>
 
