@@ -131,17 +131,18 @@ html {
 }
 
 .head{
-  background-color: white;
-   width:auto;
-   height: 100px;
-   list-style: none;
-   display: flex;
-   position: sticky;
-   top: 0px;
-   bottom: 10px;
-   left: 0px;
-   gap: 1.5rem;
-   z-index: 100;
+  backdrop-filter: blur(10px) brightness(85%);
+  color: white;
+  width:auto;
+  height: 100px;
+  list-style: none;
+  display: flex;
+  position: sticky;
+  top: 0px;
+  bottom: 10px;
+  left: 0px;
+  gap: 1.5rem;
+  z-index: 100;
 }
 
 .responsive-signature-img {
@@ -359,18 +360,62 @@ body, .main, .head, .homepage, .about-us, .faq-section, .faq-grid, .faq-item, .t
 	position:left;
   }
   
-   
+.carousel {
+  margin: 100px auto;
+  width: 100%;
+  display: flex;
+  overflow-x: auto;
+}
 
- @keyframes slideIn {
-    0% {
-      opacity: 0;
-      transform: translateY(50px);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.group{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  animation: carouselScroll 20s linear infinite;
+  padding-right: 1em;
+}
+
+.card {
+  flex: 0 0 auto;
+  height: 120px;
+  width: auto;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  text-align: center;
+  align-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card img {
+  width: auto;
+  height: 100%;
+  max-width: none;
+  object-fit: contain;
+  display: block;
+}
+
+@keyframes carouselScroll {
+  from {transform: translateX(0);}
+  to {transform: translateX(-100%);}
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
   }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .slide-in {
   animation: slideIn 2s ease-in-out forwards;
