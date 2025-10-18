@@ -92,6 +92,7 @@
   pointer-events: none;
   transition: opacity 0.4s, transform 0.4s cubic-bezier(.4,0,.2,1);
   position: absolute;
+  left: 0;
   top: 50%;
   transform: translateY(-50%) scale(0.95);
   z-index: 1;
@@ -113,7 +114,9 @@
   transition: transform 0.4s cubic-bezier(.4,0,.2,1);
 }
 .faq-item.right.expanded .faq-answer {
-  transform: translateX(-85%) translateY(-50%) scale(1);
+  transform: translateX(-62%) translateY(-50%) scale(1);
+  left: auto;
+  right: 0;
 }
 .faq-item.right .faq-gear-container .faq-answer {
   margin-left: 300%;
@@ -131,18 +134,17 @@ html {
 }
 
 .head{
-  backdrop-filter: blur(10px) brightness(85%);
-  color: white;
-  width:auto;
-  height: 100px;
-  list-style: none;
-  display: flex;
-  position: sticky;
-  top: 0px;
-  bottom: 10px;
-  left: 0px;
-  gap: 1.5rem;
-  z-index: 100;
+  background-color: white;
+   width:auto;
+   height: 100px;
+   list-style: none;
+   display: flex;
+   position: sticky;
+   top: 0px;
+   bottom: 10px;
+   left: 0px;
+   gap: 1.5rem;
+   z-index: 100;
 }
 
 .responsive-signature-img {
@@ -153,23 +155,13 @@ html {
 }
 
 .faq-gear-container:hover .faq-gear-img {
-  cursor: pointer;
   transform: scale(1.2);
 }
 .faq-item.expanded .faq-gear-container .faq-gear-img {
-    transform: scale(1.2) translateX(-1.5rem);
-    animation: spin-gear-left 0.5s cubic-bezier(.4,0,.2,1);
-  }
-/* Mobile FAQ gear expanded state: consistent transforms */
-.faq-item.expanded:not(.right) .faq-gear-container .faq-gear-img {
   transform: scale(1.2) translateX(-1.5rem);
-  animation: spin-gear-left 0.5s cubic-bezier(.4,0,.2,1);
+  animation: spin-gear 0.5s cubic-bezier(.4,0,.2,1);
 }
-.faq-item.right.expanded .faq-gear-container .faq-gear-img {
-  transform: scale(1.2) translateX(1.5rem);
-  animation: spin-gear-right 0.5s cubic-bezier(.4,0,.2,1);
-}
-.faq-item.expanded:not(.right) .faq-gear-container .faq-gear-text {
+.faq-item.expanded .faq-gear-container .faq-gear-text {
   transform: translate(-50%, -50%) translateX(-1.5rem);
   transition: transform 0.4s cubic-bezier(.4,0,.2,1);
 }
@@ -283,7 +275,7 @@ body{
   transform: translateX(45%) translateY(-50%) scale(1);
   }
   .faq-item.right.expanded .faq-answer {
-  transform: translateX(-77%) translateY(-50%) scale(1);
+  transform: translateX(-45%) translateY(-50%) scale(1);
   }
   .faq-grid > .grid {
     grid-template-columns: repeat(2, 1fr);
@@ -293,7 +285,7 @@ body{
 
 body, .main, .head, .homepage, .about-us, .faq-section, .faq-grid, .faq-item, .team, .team-section, .team-member-img, .Recap, .schedule, .location, .glowing-text, .glowing-text-yellow {
   font-family: "Nunito", cursive !important;
-}
+
 .homepage{
    width:auto;
    height: 700px;
@@ -360,62 +352,18 @@ body, .main, .head, .homepage, .about-us, .faq-section, .faq-grid, .faq-item, .t
 	position:left;
   }
   
-.carousel {
-  margin: 100px auto;
-  width: 100%;
-  display: flex;
-  overflow-x: auto;
-}
+   
 
-.carousel::-webkit-scrollbar {
-  display: none;
-}
-
-.group{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1em;
-  animation: carouselScroll 20s linear infinite;
-  padding-right: 1em;
-}
-
-.card {
-  flex: 0 0 auto;
-  height: 120px;
-  width: auto;
-  border-radius: 1rem;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-  text-align: center;
-  align-content: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.card img {
-  width: auto;
-  height: 100%;
-  max-width: none;
-  object-fit: contain;
-  display: block;
-}
-
-@keyframes carouselScroll {
-  from {transform: translateX(0);}
-  to {transform: translateX(-100%);}
-}
-
-@keyframes slideIn {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
+ @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 .slide-in {
   animation: slideIn 2s ease-in-out forwards;
@@ -437,12 +385,13 @@ body, .main, .head, .homepage, .about-us, .faq-section, .faq-grid, .faq-item, .t
     cursor: pointer;
     border-color: #fff !important;
     display: block;
-}
-.team-member-img:hover {
-  border-color: #f4802e !important;
-  transform: scale(1.2);
-}
-
-.caps {
-text-transform: uppercase;
+  }
+  .team-member-img:hover {
+    border-color: #f4802e !important;
+    transform: scale(1.2);
+  }
+  
+  .caps {
+  text-transform: uppercase;
+  }
 }
