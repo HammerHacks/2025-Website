@@ -3,18 +3,18 @@ import {useEffect} from "react";
 export default function MeetTheTeamComponent() {
 
   //TODO: refactor to follow standard practices + strong typing
-  let teamMembers;
-  let nameEl;
-  let roleEl;
-  let schoolEl;
-  let bioEl;
+  let teamMembers: NodeListOf<Element>;
+  let nameEl: Element;
+  let roleEl: Element;
+  let schoolEl: Element;
+  let bioEl: Element;
 
   useEffect(() => {
     teamMembers = document.querySelectorAll('.team-member');
-    nameEl = document.getElementById('team-desc-name');
-    roleEl = document.getElementById('team-desc-role');
-    schoolEl = document.getElementById('team-desc-school');
-    bioEl = document.getElementById('team-desc-bio');
+    nameEl = document.getElementById('team-desc-name') as Element;
+    roleEl = document.getElementById('team-desc-role') as Element;
+    schoolEl = document.getElementById('team-desc-school') as Element;
+    bioEl = document.getElementById('team-desc-bio') as Element;
 
     teamMembers.forEach(function(member) {
       member.addEventListener('mouseenter', function () {
@@ -47,13 +47,13 @@ export default function MeetTheTeamComponent() {
   }, []);
 
 
-  function decodeAllText(elements, newTexts, duration) {
+  function decodeAllText(elements: Element[], newTexts: string[], duration: number) {
     const chars = '#$%^&*+-=<>?';
     const oldTexts = elements.map(el => el.textContent);
     const maxLens = newTexts.map((txt, i) => Math.max(txt.length, oldTexts[i].length));
     const startTime = performance.now();
 
-    function update(now) {
+    function update(now: number) {
       const elapsed = now - startTime;
       const progress = Math.min(1, elapsed / duration);
 
@@ -91,7 +91,7 @@ export default function MeetTheTeamComponent() {
     requestAnimationFrame(update);
   }
 
-  function setTeamDesc(name, role, school, bio) {
+  function setTeamDesc(name: string, role:string, school:string, bio:string) {
     decodeAllText([nameEl, roleEl, schoolEl, bioEl], [name, role, school, bio], 500);
   }
 
@@ -158,7 +158,7 @@ export default function MeetTheTeamComponent() {
               </a>
               <a href="https://www.linkedin.com/in/rosan-syal-1b2a82339/" target="_blank" rel="noopener noreferrer">
                 <img src="headshots/RosanSyal.png" alt="Member 10" className="team-member-img team-member"
-                     data-desc="<strong>Rosan Syal</strong><br>Operations Coordinator Likes → The Legend of Zelda and Gaming<br>Grade 11 @ Rosan Syal"/>
+                     data-desc="<strong>Rosan Syal</strong><br>Operations Coordinator Likes → The Legend of Zelda and Gaming<br>Grade 11 @ Westdale SS"/>
               </a>
               <div>
                 <img src="headshots/SukhsimranChana.JPG" alt="Member 11" className="team-member-img team-member"
