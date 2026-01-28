@@ -21,3 +21,9 @@
   font-variation-settings:
     "wdth" 100;
 }
+
+.fuzzy-bubbles {
+  font-family: "Fuzzy Bubbles", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
