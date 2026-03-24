@@ -1,0 +1,215 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+}
+
+/* ─── Base ─── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  line-height: 1.6;
+}
+
+.caps {
+  text-transform: uppercase;
+}
+
+/* ─── Glowing text effects ─── */
+.glowing-text {
+  color: black;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #0073e6,
+    0 0 20px #0073e6,
+    0 0 30px #0073e6,
+    0 0 40px #0073e6;
+}
+
+.glowing-text-yellow {
+  color: black;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fee000,
+    0 0 20px #fee000,
+    0 0 30px #fee000,
+    0 0 40px #fee000;
+}
+
+/* ─── Slide-in animation ─── */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in {
+  animation: slideIn 2s ease-in-out forwards;
+}
+
+/* ─── Signature image ─── */
+.responsive-signature-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* ─── Footer ─── */
+.foot {
+  background-color: black;
+  color: white;
+}
+
+/* ─── FAQ gear animations ─── */
+@keyframes spin-gear-left {
+  from { transform: scale(1.2) translateX(0) rotate(0deg); }
+  to { transform: scale(1.2) translateX(-1.5rem) rotate(-360deg); }
+}
+
+@keyframes spin-gear-right {
+  from { transform: scale(1.2) translateX(0) rotate(0deg); }
+  to { transform: scale(1.2) translateX(1.5rem) rotate(360deg); }
+}
+
+.faq-item {
+  z-index: 1;
+}
+
+.faq-item.expanded {
+  z-index: 2;
+}
+
+.faq-item.expanded .faq-gear-container {
+  z-index: 4;
+  position: relative;
+}
+
+.faq-gear-container:hover .faq-gear-img {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.faq-item.expanded:not(.right) .faq-gear-container .faq-gear-img {
+  transform: scale(1.2) translateX(-1.5rem);
+  animation: spin-gear-left 0.5s cubic-bezier(.4,0,.2,1);
+}
+
+.faq-item.expanded .faq-gear-container .faq-gear-text {
+  transform: translate(-50%, -50%) translateX(-1.5rem);
+  transition: transform 0.4s cubic-bezier(.4,0,.2,1);
+}
+
+.faq-answer {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-50%) scale(0.95);
+  transition: opacity 0.4s, transform 0.4s cubic-bezier(.4,0,.2,1);
+}
+
+.faq-item.expanded .faq-answer {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(62%) translateY(-50%) scale(1);
+}
+
+.faq-item.right.expanded .faq-gear-container .faq-gear-img {
+  transform: scale(1.2) translateX(1.5rem);
+  animation: spin-gear-right 0.5s cubic-bezier(.4,0,.2,1);
+}
+
+.faq-item.right.expanded .faq-gear-container .faq-gear-text {
+  transform: translate(-50%, -50%) translateX(1.5rem);
+  transition: transform 0.4s cubic-bezier(.4,0,.2,1);
+}
+
+.faq-item.right.expanded .faq-answer {
+  transform: translateX(-85%) translateY(-50%) scale(1);
+}
+
+/* ─── Team member images ─── */
+.team-member-img {
+  width: 5rem;
+  height: 5rem;
+  transition: border-color 0.2s, transform 0.3s;
+  border-radius: 9999px;
+  object-fit: cover;
+  border-width: 4px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  cursor: pointer;
+  border-color: #fff !important;
+  display: block;
+}
+
+.team-member-img:hover {
+  border-color: #f4802e !important;
+  transform: scale(1.2);
+}
+
+#team-section {
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+/* ─── Mobile responsive ─── */
+@media (max-width: 768px) {
+  .team-member-img {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .foot {
+    padding-left: 4px;
+    padding-right: 4px;
+    min-height: 320px;
+  }
+
+  .responsive-signature-img {
+    max-width: 320px;
+    max-height: 80px;
+  }
+
+  .faq-gear-container {
+    width: 8rem !important;
+    height: 8rem !important;
+  }
+
+  .faq-gear-text {
+    width: 5rem !important;
+    font-size: 0.75rem !important;
+  }
+
+  .faq-answer {
+    min-width: 200px !important;
+    max-width: 220px !important;
+    font-size: 0.875rem !important;
+  }
+
+  .faq-item.expanded .faq-answer {
+    transform: translateX(45%) translateY(-50%) scale(1);
+  }
+
+  .faq-item.right.expanded .faq-answer {
+    transform: translateX(-77%) translateY(-50%) scale(1);
+  }
+
+  .faq-grid > .grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+  }
+}
