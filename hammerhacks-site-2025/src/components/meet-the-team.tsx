@@ -119,65 +119,60 @@ export default function MeetTheTeamComponent() {
             <div
                 className="flex flex-row flex-wrap gap-6 justify-center items-center w-full border-t-[2px] border-[#e5e7eb] py-[32px]">
               <a href="https://www.linkedin.com/in/selena-nguyen-0b7287321/" target="_blank" rel="noopener noreferrer">
-                <img src="headshots/SelenaNguyen.png" alt="Member 1" className="team-member-img team-member"
+                <img src="headshots/SelenaNguyen.png" alt="the MASSIVE Selena Ngyuen" className="team-member-img team-member"
                      data-desc="<strong>Selena Nguyen</strong><br>Lead Organizer Likes → Celeste and Hollow Knight<br>Grade 12 @ Orchard Park SS"/>
               </a>
               <a href="https://www.linkedin.com/in/maisy-thomas-940a07387/" target="_blank" rel="noopener noreferrer">
-                <img src="headshots/MaisyThomas.jpg" alt="Member 2" className="team-member-img team-member"
+                <img src="headshots/MaisyThomas.jpg" alt="Maisy" className="team-member-img team-member"
                      data-desc="<strong>Maisy Thomas</strong><br>Lead Organizer Likes → Swimming and Climbing<br>Grade 12 @ St. Mary SS"/>
               </a>
               <div>
-                <img src="headshots/DavidCosma(temporary).jpeg" alt="Member 3"
+                <img src="headshots/DavidCosma(temporary).jpeg" alt="Big David"
                      className="team-member-img team-member"
                      data-desc="<strong>David Cosma</strong><br>Lead Web Developer Likes → Board Games and Raspberries <br>Grade 12 @ Westmount SS"/>
               </div>
               <a href="https://www.linkedin.com/in/aaron-dam-a798512a5/" target="_blank" rel="noopener noreferrer">
-                <img src="headshots/AaronDam.jpeg" alt="Member 4" className="team-member-img team-member"
+                <img src="headshots/AaronDam.jpeg" alt="A A Ron" className="team-member-img team-member"
                      data-desc="<strong>Aaron Dam</strong><br>Web Developer Likes → Basketball and Peanut Butter <br>Grade 12 @ Westmount SS"/>
               </a>
               <a href="https://www.linkedin.com/in/unimashi-ugor-6409a5352/" target="_blank" rel="noopener noreferrer">
-                <img src="headshots/Unimashi.jpg" alt="Member 5" className="team-member-img team-member"
+                <img src="headshots/Unimashi.jpg" alt="Unimashi" className="team-member-img team-member"
                      data-desc="<strong>Unimashi Ugor</strong><br>Web Developer Likes → Roller Coasters, Computer Systems and Retro Gaming <br>Grade 11 @ Bishop Ryan CSS"/>
               </a>
-              <a href="https://www.linkedin.com/in/jasminemontrichard/" target="_blank" rel="noopener noreferrer">
-                <img src="headshots/JasmineMontrichard.jpeg" alt="Member 6"
-                     className="team-member-img team-member"
-                     data-desc="<strong>Jasmine Montrichard</strong><br>Logistics Lead Likes → Philosophy and Economics, Technology, Event Organizing, Drawing<br>Prev. @ St. Jean Brebeuf CSS"/>
-              </a>
               <a href="https://www.linkedin.com/in/gabriel-tsui/" target="_blank" rel="noopener noreferrer">
-                <img src="headshots/GabrielTsui.jpg" alt="Member 7" className="team-member-img team-member"
-                     data-desc="<strong>Gabriel Tsui</strong><br>Logistics Coordinator Likes → Philosophy, Art, Rhythm Games, Calisthenics<br>Grade 11 @ St. Mary CSS"/>
+                <img src="headshots/GabrielTsui.jpg" alt="git commit -m 'hi gabriel'" className="team-member-img team-member"
+                     data-desc="<strong>Gabriel Tsui</strong><br>Logistics Lead Likes → Philosophy, Art, Chemistry, Calisthenics<br>Grade 11 @ St. Mary CSS"/>
               </a>
               <a href="https://www.linkedin.com/in/jacob-canlas-152a592b3/" target="_blank" rel="noopener noreferrer">
-                <img src="headshots/JacobCanlas.PNG" alt="Member 16" className="team-member-img team-member"
+                <img src="headshots/JacobCanlas.PNG" alt="Blue Jay but not Blue" className="team-member-img team-member"
                      data-desc="<strong>Jacob Canlas</strong><br>Logistics Coordinator Likes → Pokémon, Dinosaurs, Cats, Manga/Manhwa, Laufey, W2E <br>Grade 12 @ Bishop Ryan CSS"/>
               </a>
               <a href="https://www.linkedin.com/in/joel-mathews-4009a5311/" target="_blank" rel="noopener noreferrer">
-                <img src="headshots/JoelMathews.jpg" alt="Member 8" className="team-member-img team-member"
+                <img src="headshots/JoelMathews.jpg" alt="Joel." className="team-member-img team-member"
                      data-desc="<strong>Joel Mathews</strong><br>Operations Lead Likes → Hotpot and Iced Tea<br>Grade 12 @ Westmount SS"/>
               </a>
               <a href="https://www.linkedin.com/in/rosan-syal-1b2a82339/" target="_blank" rel="noopener noreferrer">
-                <img src="headshots/RosanSyal.png" alt="Member 10" className="team-member-img team-member"
+                <img src="headshots/RosanSyal.png" alt="Hi Rosan!" className="team-member-img team-member"
                      data-desc="<strong>Rosan Syal</strong><br>Operations Coordinator Likes → The Legend of Zelda and Gaming<br>Grade 11 @ Westdale SS"/>
               </a>
               <div>
-                <img src="headshots/SukhsimranChana.JPG" alt="Member 11" className="team-member-img team-member"
+                <img src="headshots/SukhsimranChana.JPG" alt="Sukh Chana" className="team-member-img team-member"
                      data-desc="<strong>Sukhsimran Chana</strong><br>Marketing Lead Likes → Poutine and Tyler the Creator <br>Grade 12 @ Orchard Park SS"/>
               </div>
               <div>
-                <img src="headshots/CameronJ.png" alt="Member 12" className="team-member-img team-member"
+                <img src="headshots/CameronJ.png" alt="Cameron" className="team-member-img team-member"
                      data-desc="<strong>Cameron Jacka</strong><br>Marketing Coordinator Likes → Robotics and Camping <br>Grade 12 @ St. Mary CSS"/>
               </div>
               <div>
-                <img src="headshots/MerinelGomez.jpg" alt="Member 13" className="team-member-img team-member"
+                <img src="headshots/MerinelGomez.jpg" alt="Merinel" className="team-member-img team-member"
                      data-desc="<strong>Merinel Gomez</strong><br>Marketing Coordinator Likes → Cats, Art, Writing, Drama <br>Grade 10 @ St. Thomas More CSS"/>
               </div>
               <a href="https://www.linkedin.com/in/alexandra-lima-66aa8a365/" target="_blank" rel="noopener noreferrer">
-                <img src="headshots/AlexandraLima.png" alt="Member 14" className="team-member-img team-member"
+                <img src="headshots/AlexandraLima.png" alt="Alex" className="team-member-img team-member"
                      data-desc="<strong>Alexandra Lima</strong><br>Finance Lead Likes → Music, Tennis, Nintendo Games<br>Grade 12 @ St. Thomas More CSS"/>
               </a>
               <a href="https://www.linkedin.com/in/nand-shah-4884b5295/" target="_blank" rel="noopener noreferrer">
-                <img src="headshots/NandShah.png" alt="Member 15" className="team-member-img team-member"
+                <img src="headshots/NandShah.png" alt="Nand" className="team-member-img team-member"
                      data-desc="<strong>Nand Shah</strong><br>Finance Coordinator Likes → Basketball and Hockey<br>Grade 11 @ Westmount SS"/>
               </a>
             </div>
