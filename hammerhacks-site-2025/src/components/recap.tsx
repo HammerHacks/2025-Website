@@ -1,63 +1,48 @@
-"use client";
+import { LEFT_STATS, RIGHT_STATS, RECAP_VIDEO_URL } from "@/data/recap-stats";
+import Carousel from "@/components/Carousel";
 
-interface StatItem {
-    value: string;
-    label: string;
-}
-
-const LEFT_STATS: StatItem[] = [
-    { value: "140", label: "hackers" },
-    { value: "47", label: "projects" },
-];
-
-const RIGHT_STATS: StatItem[] = [
-    { value: "17", label: "schools" },
-    { value: "40+", label: "mentors" },
-];
-
-function StatBlock({ stat }: { stat: StatItem }) {
+export default function Recap() {
     return (
-        <div className="text-center">
-            <h2 className="text-5xl xl:text-6xl font-bold mt-4">{stat.value}</h2>
-            <h3 className="text-3xl">{stat.label}</h3>
-        </div>
-    );
-}
+        <section className="bg-[var(--navy)] pt-20 pb-10 text-white overflow-hidden" id="recap">
+            <div className="container mx-auto px-4 max-w-6xl">
+                <h2 className="text-3xl md:text-4xl font-bold text-center mb-16">
+                    A Look Into Last Year...
+                </h2>
 
-export default function RecapComponent() {
-    return (
-        <div className="Recap slide-in bg-[#263272] text-center py-5 text-white">
-            <h1 className="text-5xl font-bold flex justify-center mt-16 mb-8">
-                A Look Into Last Year...
-            </h1>
+                <div className="flex flex-col lg:flex-row justify-center items-center gap-12 lg:gap-24">
+                    <div className="flex flex-row lg:flex-col justify-center gap-16 lg:gap-12 text-center">
+                        {LEFT_STATS.map((stat, i) => (
+                            <div key={i} className="flex flex-col items-center">
+                                <span className="text-5xl font-bold">{stat.value}</span>
+                                <span className="text-xl mt-2">{stat.label}</span>
+                            </div>
+                        ))}
+                    </div>
 
-            <div className="flex flex-col md:flex-row items-center justify-center w-full gap-8 px-4">
-                {/* Left stats */}
-                <div className="flex flex-col gap-4 md:gap-8 md:items-end md:justify-center">
-                    {LEFT_STATS.map((stat) => (
-                        <StatBlock key={stat.label} stat={stat} />
-                    ))}
-                </div>
+                    <div className="w-full max-w-[560px] aspect-video rounded-xl overflow-hidden shadow-2xl relative z-10">
+                        <iframe
+                            width="100%"
+                            height="100%"
+                            src={RECAP_VIDEO_URL}
+                            title="HammerHacks Recap Video"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                            className="border-0 bg-black"
+                        ></iframe>
+                    </div>
 
-                {/* Video */}
-                <div className="flex justify-center md:mx-8">
-                    <iframe
-                        className="rounded-lg shadow-lg w-[90vw] max-w-[560px] h-[50vw] max-h-[315px]"
-                        src="https://www.youtube.com/embed/Jb-2RpDonEs"
-                        title="HammerHacks recap video"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerPolicy="strict-origin-when-cross-origin"
-                        allowFullScreen
-                    />
-                </div>
-
-                {/* Right stats */}
-                <div className="flex flex-col gap-4 md:gap-8 md:items-start md:justify-center">
-                    {RIGHT_STATS.map((stat) => (
-                        <StatBlock key={stat.label} stat={stat} />
-                    ))}
+                    <div className="flex flex-row lg:flex-col justify-center gap-16 lg:gap-12 text-center">
+                        {RIGHT_STATS.map((stat, i) => (
+                            <div key={i} className="flex flex-col items-center">
+                                <span className="text-5xl font-bold">{stat.value}</span>
+                                <span className="text-xl mt-2">{stat.label}</span>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
-        </div>
+
+            <Carousel />
+        </section>
     );
 }

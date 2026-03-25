@@ -1,23 +1,23 @@
-import Header from "@/components/header";
-import HomepageComponent from "@/components/homepage";
-import AboutUs from "@/components/about-us";
-import RecapComponent from "@/components/recap";
-import SponsorsComponent from "@/components/sponsors";
-import FAQComponent from "@/components/faq";
-import MeetTheTeamComponent from "@/components/meet-the-team";
-import FooterComponent from "@/components/footer";
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
+import About from "@/components/About";
+import Recap from "@/components/Recap";
+import Sponsors from "@/components/Sponsors";
+import FAQ from "@/components/FAQ";
+import Team from "@/components/Team";
+import Footer from "@/components/Footer";
 
 export default function HomePage() {
   return (
-    <div className="caps">
+    <main>
       <Header />
-      <HomepageComponent />
-      <AboutUs />
-      <RecapComponent />
-      <SponsorsComponent />
-      <FAQComponent />
-      <MeetTheTeamComponent />
-      <FooterComponent />
-    </div>
+      <Hero />
+      <About />
+      <Recap />
+      <Sponsors />
+      <FAQ />
+      <Team />
+      <Footer />
+    </main>
   );
 }

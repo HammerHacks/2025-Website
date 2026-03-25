@@ -20,10 +20,10 @@ export default function Header() {
 
   return (
     <header
-      className="bg-white/30 backdrop-blur-lg h-30 flex sticky top-0 b-10px l-0 gap-1.5 z-100"
+      className="backdrop-blur-lg backdrop-brightness-85 text-black h-[100px] flex sticky top-0 left-0 gap-6 z-[100]"
       id="header"
     >
-      {/* Logo */}
+      {/*logo*/}
       <div className="pl-6 pr-4 flex items-center">
         <a href="/">
           <Image
@@ -36,8 +36,11 @@ export default function Header() {
         </a>
       </div>
 
-      {/* Desktop nav */}
-      <nav className="desktop-nav hidden md:flex items-center gap-6 text-black font-bold">
+      {/*desktop nav*/}
+      <nav
+        className="hidden md:flex items-center gap-6 font-bold"
+        aria-label="Main navigation"
+      >
         {NAV_LINKS.map((link) => (
           <a
             key={link.href}
@@ -56,31 +59,33 @@ export default function Header() {
         </a>
       </nav>
 
-      {/* Mobile nav */}
-      <div className="mobile-nav md:hidden">
+      {/*mobile nav*/}
+      <div className="md:hidden flex items-center">
         <button
           type="button"
           onClick={() => setMobileOpen((prev) => !prev)}
           className="text-2xl font-bold text-white bg-orange-400 border-4 border-orange-400 rounded-full px-6 py-2 absolute top-6 right-6 hover:bg-blue-800 hover:border-blue-800 transition"
+          aria-label="Toggle menu"
+          aria-expanded={mobileOpen}
         >
           {mobileOpen ? "Close" : "Menu"}
         </button>
 
         {mobileOpen && (
-          <div className="mobile-menu-box absolute top-20 right-4 bg-white rounded-2xl shadow-lg z-50 min-w-[180px]">
+          <div className="absolute top-20 right-4 bg-orange-400 rounded-2xl shadow-lg z-50 min-w-[180px] overflow-hidden">
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="block w-full text-left px-6 py-4 text-2xl border-b border-gray-200"
+                className="block w-full text-left px-6 py-4 text-2xl border-b border-orange-300 hover:bg-orange-500 transition"
               >
                 {link.label}
               </a>
             ))}
             <a
               href={DONATE_URL}
-              className="block w-full text-left px-6 py-4 text-2xl font-bold text-white bg-orange-400 border-4 border-orange-400 rounded-full mt-2 hover:bg-blue-800 hover:border-blue-800 transition"
+              className="block w-full text-left px-6 py-4 text-2xl font-bold hover:bg-blue-800 transition"
             >
               Donate
             </a>

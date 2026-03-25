@@ -2,7 +2,7 @@
 
 import { useCallback } from "react";
 import { TEAM_MEMBERS } from "@/data/team-members";
-import { useDecodeText } from "@/hooks/use-decode-text";
+import { useDecodeText } from "@/hooks/useDecodeText";
 
 const DEFAULT_DISPLAY = [
   "Hover over a team member",
@@ -11,7 +11,7 @@ const DEFAULT_DISPLAY = [
   "Their description will appear here.",
 ];
 
-export default function MeetTheTeamComponent() {
+export default function Team() {
   const [displayTexts, triggerDecode] = useDecodeText(DEFAULT_DISPLAY);
 
   const handleMouseEnter = useCallback(
@@ -34,7 +34,7 @@ export default function MeetTheTeamComponent() {
       {/* Description area */}
       <div className="w-full flex flex-col items-center justify-center mb-8 pt-8">
         <h2 className="text-3xl font-bold mb-4 text-center">
-          Made with 💖 by the HammerHacks team
+          Made with 🧡 by the HammerHacks team
         </h2>
         <div className="text-lg text-gray-700 min-h-[120px] flex items-center justify-center">
           <div className="w-full">
