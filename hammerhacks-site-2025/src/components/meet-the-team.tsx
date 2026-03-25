@@ -123,7 +123,7 @@ export default function MeetTheTeamComponent() {
                      data-desc="<strong>Selena Nguyen</strong><br>Lead Organizer Likes → Celeste and Hollow Knight<br>Grade 12 @ Orchard Park SS"/>
               </a>
               <a href="https://www.linkedin.com/in/maisy-thomas-940a07387/" target="_blank" rel="noopener noreferrer">
-                <img src="headshots/MaisyThomas.jpg" alt="Maisy" className="team-member-img team-member"
+                <img src="headshots/MaisyThomas.jpg" alt="Maisy the big dawg" className="team-member-img team-member"
                      data-desc="<strong>Maisy Thomas</strong><br>Lead Organizer Likes → Swimming and Climbing<br>Grade 12 @ St. Mary SS"/>
               </a>
               <div>
@@ -149,7 +149,7 @@ export default function MeetTheTeamComponent() {
               </a>
               <a href="https://www.linkedin.com/in/joel-mathews-4009a5311/" target="_blank" rel="noopener noreferrer">
                 <img src="headshots/JoelMathews.jpg" alt="Joel." className="team-member-img team-member"
-                     data-desc="<strong>Joel Mathews</strong><br>Operations Lead Likes → Hotpot and Iced Tea<br>Grade 12 @ Westmount SS"/>
+                     data-desc="<strong>Joel Mathews</strong><br>Operations Lead Likes → Pho and Iced Tea<br>Grade 12 @ Westmount SS"/>
               </a>
               <a href="https://www.linkedin.com/in/rosan-syal-1b2a82339/" target="_blank" rel="noopener noreferrer">
                 <img src="headshots/RosanSyal.png" alt="Hi Rosan!" className="team-member-img team-member"
