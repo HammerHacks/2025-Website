@@ -20,9 +20,18 @@ export default function Header() {
 
   return (
     <header
-      className="backdrop-blur-lg backdrop-brightness-85 text-black h-[100px] flex sticky top-0 left-0 gap-6 z-[100]"
+      className="text-white h-[100px] flex sticky top-0 left-0 gap-12 z-[100]"
       id="header"
     >
+      <div
+        className="absolute inset-0 -z-10 pointer-events-none backdrop-blur-lg backdrop-brightness-60"
+        style={{
+          maskImage: "linear-gradient(to bottom, black 60%, transparent 100%)",
+          WebkitMaskImage: "linear-gradient(to bottom, black 60%, transparent 100%)",
+        }}
+        aria-hidden="true"
+      />
+
       {/*logo*/}
       <div className="pl-6 pr-4 flex items-center">
         <a href="/">
@@ -38,7 +47,7 @@ export default function Header() {
 
       {/*desktop nav*/}
       <nav
-        className="hidden md:flex items-center gap-6 font-bold"
+        className="hidden md:flex items-center gap-12 font-bold"
         aria-label="Main navigation"
       >
         {NAV_LINKS.map((link) => (
