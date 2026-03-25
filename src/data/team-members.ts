@@ -48,16 +48,8 @@ export const TEAM_MEMBERS: TeamMember[] = [
         linkedin: "https://www.linkedin.com/in/unimashi-ugor-6409a5352/",
     },
     {
-        name: "Jasmine Montrichard",
-        role: "Logistics Lead",
-        likes: "Likes → Philosophy and Economics, Technology, Event Organizing, Drawing",
-        school: "Prev. @ St. Jean Brebeuf CSS",
-        photo: "/headshots/JasmineMontrichard.jpeg",
-        linkedin: "https://www.linkedin.com/in/jasminemontrichard/",
-    },
-    {
         name: "Gabriel Tsui",
-        role: "Logistics Coordinator",
+        role: "Logistics Lead",
         likes: "Likes → Philosophy, Art, Rhythm Games, Calisthenics",
         school: "Grade 11 @ St. Mary CSS",
         photo: "/headshots/GabrielTsui.jpg",
@@ -74,18 +66,10 @@ export const TEAM_MEMBERS: TeamMember[] = [
     {
         name: "Joel Mathews",
         role: "Operations Lead",
-        likes: "Likes → Hotpot and Iced Tea",
+        likes: "Likes → Pho and Iced Tea",
         school: "Grade 12 @ Westmount SS",
         photo: "/headshots/JoelMathews.jpg",
         linkedin: "https://www.linkedin.com/in/joel-mathews-4009a5311/",
-    },
-    {
-        name: "Sam Dallaway",
-        role: "Operations Coordinator",
-        likes: "Likes → Minesweeper and Hot Chocolate",
-        school: "Grade 12 @ Orchard Park SS",
-        photo: "/headshots/SamDallaway.png",
-        linkedin: "https://ca.linkedin.com/in/samantha-dallaway-2739b8369",
     },
     {
         name: "Rosan Syal",
