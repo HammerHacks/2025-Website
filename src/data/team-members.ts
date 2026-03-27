@@ -49,7 +49,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     },
     {
         name: "Gabriel Tsui",
-        role: "Logistics Lead",
+        role: "Logistics Lead, Web Developer",
         likes: "Likes → Philosophy, Art, Rhythm Games, Calisthenics",
         school: "Grade 11 @ St. Mary CSS",
         photo: "/headshots/GabrielTsui.jpg",

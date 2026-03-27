@@ -30,4 +30,3 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-hammerhacks-site-2025 copy/.next/server/chunks/ssr/\[externals\]_next_dist_shared_lib_no-fallback-error_external_59b92b38.js
