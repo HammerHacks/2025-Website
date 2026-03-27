@@ -185,12 +185,12 @@ body {
   }
 
   .responsive-signature-img {
-    max-width: 320px;
-    max-height: 80px;
+    max-width: 260px;
+    max-height: 100px;
   }
 
   .faq-gear-container {
-    width: 8rem;
+    width: 12rem;
     height: 8rem;
   }
 
@@ -206,11 +206,11 @@ body {
   }
 
   .faq-item.expanded .faq-answer {
-    transform: translateX(45%) translateY(-50%) scale(1);
+    transform: translateX(55%) translateY(-50%) scale(1);
   }
 
   .faq-item.right.expanded .faq-answer {
-    transform: translateX(-77%) translateY(-50%) scale(1);
+    transform: translateX(-55%) translateY(-50%) scale(1);
   }
 
   .faq-grid>.grid {
