@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { ABOUT_CONTENT } from "@/data/about-content";
+import { ABOUT_CONTENT } from "../data/about-content";
 
 export default function About() {
   return (

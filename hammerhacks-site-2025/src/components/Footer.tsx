@@ -1,5 +1,5 @@
-import { DONATE_URL } from "@/data/nav-links";
-import { SITE_CONFIG } from "@/data/site-config";
+import { DONATE_URL } from "../data/nav-links";
+import { SITE_CONFIG } from "../data/site-config";
 
 export default function Footer() {
   return (

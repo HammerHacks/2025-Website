@@ -1,6 +1,6 @@
 "use client";
 
-import { CAROUSEL_IMAGE_COUNT } from "@/data/recap-stats";
+import { CAROUSEL_IMAGE_COUNT } from "../data/recap-stats";
 
 const images = Array.from({ length: CAROUSEL_IMAGE_COUNT }, (_, i) => ({
   src: `/carousel/${i + 1}.jpg`,

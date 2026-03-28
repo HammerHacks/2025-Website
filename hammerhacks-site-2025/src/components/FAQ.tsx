@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { FAQ_ITEMS } from "@/data/faq-items";
+import { FAQ_ITEMS } from "../data/faq-items";
 
 export default function FAQ() {
   const [expanded, setExpanded] = useState<number | null>(null);

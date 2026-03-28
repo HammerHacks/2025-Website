@@ -2,7 +2,7 @@
 
 import { useCallback, useState } from "react";
 import Image from "next/image";
-import { DONATE_URL, NAV_LINKS } from "@/data/nav-links";
+import { DONATE_URL, NAV_LINKS } from "../data/nav-links";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
