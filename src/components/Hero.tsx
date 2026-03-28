@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { HERO_CONTENT } from "../data/hero-content";
+import { HERO_CONTENT } from "@/data/hero-content";
 
 export default function Hero() {
   return (

@@ -1,8 +1,8 @@
 "use client";
 
 import { useCallback } from "react";
-import { TEAM_MEMBERS } from "../data/team-members";
-import { useDecodeText } from "../hooks/useDecodeText";
+import { TEAM_MEMBERS } from "@/data/team-members";
+import { useDecodeText } from "@/hooks/useDecodeText";
 
 const DEFAULT_DISPLAY = [
   "Hover over a team member",

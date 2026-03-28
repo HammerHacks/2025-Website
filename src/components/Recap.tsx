@@ -1,5 +1,5 @@
-import { LEFT_STATS, RIGHT_STATS, RECAP_VIDEO_URL } from "../data/recap-stats";
-import Carousel from "./Carousel";
+import { LEFT_STATS, RIGHT_STATS, RECAP_VIDEO_URL } from "@/data/recap-stats";
+import Carousel from "@/components/Carousel";
 
 export default function Recap() {
     return (

@@ -1,6 +1,6 @@
 "use client";
 
-import { SITE_CONFIG } from "../data/site-config";
+import { SITE_CONFIG } from "@/data/site-config";
 
 function SponsorCard({
   name,
