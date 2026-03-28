@@ -42,7 +42,7 @@ export default function SponsorsSection() {
   return (
     <section
       id="sponsors"
-      className="flex justify-center items-center px-6 md:px-12 w-screen"
+      className="flex justify-center items-center px-6 md:px-12 w-full"
     >
       <div className="w-full p-8">
         <div className="py-4">
