@@ -20,7 +20,7 @@ export default function Header() {
 
   return (
     <header
-      className="text-white h-[100px] flex sticky top-0 left-0 gap-12 z-[100]"
+      className="text-white h-[100px] flex sticky top-0 left-0 gap-12 z-100"
       id="header"
     >
       <div

@@ -34,13 +34,13 @@ export default function FAQ() {
                   role="button"
                   tabIndex={0}
                 >
-                  <span className="faq-gear-container relative flex items-center justify-center w-[12.5rem] h-[12.5rem]">
+                  <span className="faq-gear-container relative flex items-center justify-center w-50 h-50">
                     <img
                       src="/blueGear.png"
                       alt="Gear"
-                      className="faq-gear-img w-full h-full object-contain absolute left-0 top-0 transition-transform duration-400 ease-in-out z-[2]"
+                      className="faq-gear-img w-full h-full object-contain absolute left-0 top-0 transition-transform duration-400 ease-in-out z-2"
                     />
-                    <span className="faq-gear-text text-[#263272] text-base font-bold text-center w-28 pointer-events-none z-[3] transition-transform duration-400 ease-in-out">
+                    <span className="faq-gear-text text-[#263272] text-base font-bold text-center w-28 pointer-events-none z-3 transition-transform duration-400 ease-in-out">
                       {item.question}
                     </span>
                   </span>
