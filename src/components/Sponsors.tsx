@@ -13,12 +13,14 @@ function SponsorCard({
   tier: "hammer" | "platinum" | "titanium" | "silver" | "aluminum";
   link: string;
 }) {
+
+  // TODO: change height of sponsor cards based on tier once more sponsors arrive
   const tierStyles = {
-    hammer: "h-64",
-    platinum: "h-48",
-    titanium: "h-32",
-    silver: "h-24",
-    aluminum: "h-16",
+    hammer: "h-28",
+    platinum: "h-28",
+    titanium: "h-28",
+    silver: "h-28",
+    aluminum: "h-28",
   }[tier];
 
   return (
@@ -64,10 +66,21 @@ export default function SponsorsSection() {
             </a>
           </p>
 
-          <div className="flex flex-col gap-12 md:gap-6">
-            {/* Gold sponsors: 2 per row capacity, centered */}
+          <div className="flex flex-col gap-12 md:gap-2 mt-10">
+            {/* Titanium sponsors: 2 per row capacity, centered */}
             <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12">
-
+              <SponsorCard
+                name="Invest In Hamilton"
+                image="/sponsors/investinhamilton.jpg"
+                tier="titanium"
+                link="https://www.investinhamilton.ca/"
+              />
+              <SponsorCard
+                name="Yubico"
+                image="/sponsors/yubico.png"
+                tier="titanium"
+                link="https://www.yubico.com/"
+              />
             </div>
 
             {/* Silver sponsors: 3 per row capacity, centered */}
@@ -76,18 +89,18 @@ export default function SponsorsSection() {
             </div>
 
             {/* Aluminum sponsors: 4 per row capacity, centered */}
-            {/*TODO: Update sponsor tiers once we get more sponsors. Best Buy and Barangas are currently placeholders. */}
+            {/*TODO: Update sponsor tiers once we get more sponsors.*/}
             <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8">
               <SponsorCard
                 name="Best Buy"
                 image="/sponsors/bestbuy.png"
-                tier="hammer"
+                tier="aluminum"
                 link="https://www.bestbuy.ca/"
               />
               <SponsorCard
                 name="Barangas On The Beach"
                 image="/sponsors/barangas.png"
-                tier="hammer"
+                tier="aluminum"
                 link="https://barangas.ca/"
               />
             </div>
