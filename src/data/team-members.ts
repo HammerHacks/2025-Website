@@ -56,14 +56,6 @@ export const TEAM_MEMBERS: TeamMember[] = [
         linkedin: "https://www.linkedin.com/in/gabriel-tsui/",
     },
     {
-        name: "Jacob Canlas",
-        role: "Logistics Coordinator",
-        likes: "Likes → Pokémon, Dinosaurs, Cats, Manga/Manhwa, Laufey, W2E",
-        school: "Grade 12 @ Bishop Ryan CSS",
-        photo: "/headshots/JacobCanlas.PNG",
-        linkedin: "https://ca.linkedin.com/in/jacob-canlas-152a592b3",
-    },
-    {
         name: "Joel Mathews",
         role: "Operations Lead",
         likes: "Likes → Pho and Iced Tea",
