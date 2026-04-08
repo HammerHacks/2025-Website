@@ -1,11 +1,21 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
-import { DONATE_URL, NAV_LINKS } from "@/data/nav-links";
+import { NAV_LINKS, REGISTER_URL, DONATE_URL } from "@/data/nav-links";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    function onScroll() {
+      setScrolled(window.scrollY > 40);
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const handleNavClick = useCallback(
     (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -19,88 +29,137 @@ export default function Header() {
   );
 
   return (
-    <header
-      className="text-white h-[100px] flex sticky top-0 left-0 gap-12 z-100"
-      id="header"
-    >
-      <div
-        className="absolute inset-0 -z-10 pointer-events-none backdrop-blur-lg backdrop-brightness-60"
-        style={{
-          maskImage: "linear-gradient(to bottom, black 60%, transparent 100%)",
-          WebkitMaskImage: "linear-gradient(to bottom, black 60%, transparent 100%)",
-        }}
-        aria-hidden="true"
-      />
-
-      {/*logo*/}
-      <div className="pl-6 pr-4 flex items-center">
-        <a href="/">
+    <>
+      <header
+        className={`fixed top-0 left-0 w-full h-[72px] flex items-center justify-between px-6 z-50 transition-all duration-300 ${scrolled
+          ? "bg-white/90 backdrop-blur-xl shadow-sm border-b border-[rgba(38,50,98,0.08)]"
+          : "bg-transparent"
+          }`}
+        id="header"
+      >
+        {/* Logo */}
+        <a href="/" className="shrink-0">
           <Image
             src="/logo.webp"
-            alt="Hammer Hacks Logo"
-            height={50}
-            width={110}
-            className="h-14 w-auto max-w-[160px] transition-transform duration-300 hover:scale-105 drop-shadow-md rounded-md"
+            alt="HammerHacks Logo"
+            height={44}
+            width={44}
+            className="h-11 w-11 transition-transform duration-300 hover:scale-105 drop-shadow-sm rounded-md"
           />
         </a>
-      </div>
 
-      {/*desktop nav*/}
-      <nav
-        className="hidden md:flex items-center gap-12 font-bold"
-        aria-label="Main navigation"
-      >
-        {NAV_LINKS.map((link) => (
+        {/* Desktop nav */}
+        <nav
+          className="hidden md:flex items-center gap-8"
+          aria-label="Main navigation"
+        >
+          {NAV_LINKS.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={(e) => handleNavClick(e, link.href)}
+              className="text-base font-bold transition-colors duration-200"
+              style={{
+                color: "var(--navy)",
+                fontFamily: "var(--font-display)",
+              }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.color = "var(--orange)")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.color = "var(--navy)")
+              }
+            >
+              {link.label}
+            </a>
+          ))}
+
+          {/* Donate is secondary */}
           <a
-            key={link.href}
-            href={link.href}
-            onClick={(e) => handleNavClick(e, link.href)}
-            className="slide-in text-2xl hover:text-blue-300 transition"
+            href={DONATE_URL}
+            className="text-base font-bold transition-colors duration-200"
+            style={{
+              color: "var(--navy)",
+              fontFamily: "var(--font-display)",
+              opacity: 0.7,
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.color = "var(--orange)";
+              e.currentTarget.style.opacity = "1";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.color = "var(--navy)";
+              e.currentTarget.style.opacity = "0.7";
+            }}
           >
-            {link.label}
+            Donate
           </a>
-        ))}
-        <a
-          href={DONATE_URL}
-          className="text-2xl font-bold text-white bg-blue-800 border-4 border-blue-800 rounded-full px-6 py-2 absolute top-6 right-6 hover:bg-blue-400 hover:border-blue-400 transition"
-        >
-          Donate
-        </a>
-      </nav>
 
-      {/*mobile nav*/}
-      <div className="md:hidden flex items-center">
-        <button
-          type="button"
-          onClick={() => setMobileOpen((prev) => !prev)}
-          className="text-2xl font-bold text-white bg-orange-400 border-4 border-orange-400 rounded-full px-6 py-2 absolute top-6 right-6 hover:bg-blue-800 hover:border-blue-800 transition"
-          aria-label="Toggle menu"
-          aria-expanded={mobileOpen}
-        >
-          {mobileOpen ? "Close" : "Menu"}
-        </button>
+          {/* Register is primary */}
+          <a href={REGISTER_URL} className="btn-primary text-sm py-2 px-5">
+            Register
+          </a>
+        </nav>
 
-        {mobileOpen && (
-          <div className="absolute top-20 right-4 bg-orange-400 rounded-2xl shadow-lg z-50 min-w-[180px] overflow-hidden">
+        {/* Mobile hamburger */}
+        <div className="md:hidden">
+          <button
+            type="button"
+            onClick={() => setMobileOpen((prev) => !prev)}
+            className="btn-primary text-sm py-2 px-5"
+            aria-label="Toggle menu"
+            aria-expanded={mobileOpen}
+          >
+            {mobileOpen ? "Close" : "Menu"}
+          </button>
+        </div>
+      </header>
+
+      {/* Mobile menu overlay */}
+      {mobileOpen && (
+        <div className="md:hidden">
+          {/* Backdrop */}
+          <div
+            className="fixed inset-0 bg-black/30 z-30"
+            onClick={() => setMobileOpen(false)}
+            aria-hidden="true"
+          />
+
+          {/* Slide-in panel */}
+          <div
+            className="fixed top-0 right-0 h-full w-72 z-40 flex flex-col py-20 px-8 gap-2"
+            style={{
+              background: "var(--navy)",
+              animation: "slideInRight 0.3s ease-out",
+            }}
+          >
             {NAV_LINKS.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="block w-full text-left px-6 py-4 text-2xl border-b border-orange-300 hover:bg-orange-500 transition"
+                className="text-xl font-bold text-white py-3 border-b border-white/10 transition-colors hover:text-orange"
+                style={{ fontFamily: "var(--font-display)" }}
               >
                 {link.label}
               </a>
             ))}
             <a
               href={DONATE_URL}
-              className="block w-full text-left px-6 py-4 text-2xl font-bold hover:bg-blue-800 transition"
+              className="text-xl font-bold text-white/70 py-3 border-b border-white/10 transition-colors hover:text-white"
+              style={{ fontFamily: "var(--font-display)" }}
             >
               Donate
             </a>
+            <a
+              href={REGISTER_URL}
+              className="btn-primary text-lg mt-6 text-center justify-center"
+            >
+              Register
+            </a>
           </div>
-        )}
-      </div>
-    </header>
+        </div>
+      )}
+    </>
   );
 }

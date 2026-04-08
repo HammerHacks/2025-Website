@@ -4,4 +4,5 @@ export const SITE_CONFIG = {
   githubUrl: "https://github.com/HammerHacks/2025-Website",
   hhHcbUrl: "https://hcb.hackclub.com/hammerhacks",
   hcbUrl: "https://hackclub.com",
+  registerUrl: "https://hcb.hackclub.com/donations/start/hammerhacks",
 } as const;
