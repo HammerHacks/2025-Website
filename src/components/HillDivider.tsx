@@ -24,7 +24,7 @@ const VARIANTS = {
   },
   "navy-to-white": {
     bg: "transparent",
-    fills: ["#2d3a6e", "#1e2a52", "#263262"],
+    fills: ["#263262", "#2d3a6e", "#1F284F"],
   },
   "green-to-navy": {
     bg: "transparent",
@@ -32,7 +32,7 @@ const VARIANTS = {
   },
   "offwhite-to-footer": {
     bg: "#F8F9F0",
-    fills: ["#263262", "#2a3568", "#263262"],
+    fills: ["#263262", "#2d3a6e", "#263262"],
   },
 };
 
@@ -46,7 +46,7 @@ export default function HillDivider({
 
   return (
     <div
-      className={`w-full leading-none overflow-hidden ${className}`}
+      className={`relative w-full leading-none overflow-hidden ${className}`}
       style={{
         background: bg,
         transform: flip ? "scaleY(-1)" : undefined,
@@ -125,7 +125,7 @@ export default function HillDivider({
             {/* Subtly overlapping wave crest lines for texture */}
             <path d="M 100 165 Q 120 155 140 165" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="2" strokeLinecap="round" />
             <path d="M 110 172 Q 130 162 150 172" fill="none" stroke="rgba(255,255,255,0.15)" strokeWidth="1.5" strokeLinecap="round" />
-            
+
             <path d="M 500 135 Q 520 125 540 135" fill="none" stroke="rgba(255,255,255,0.2)" strokeWidth="2" strokeLinecap="round" />
             <path d="M 510 142 Q 530 132 550 142" fill="none" stroke="rgba(255,255,255,0.15)" strokeWidth="1.5" strokeLinecap="round" />
 
@@ -152,6 +152,36 @@ export default function HillDivider({
           </>
         )}
       </svg>
-    </div>
+
+      {/* Decorative Ocean Surface Elements */}
+      {isOcean && !flip && (
+        <div className="absolute inset-0 pointer-events-none z-10 overflow-hidden">
+          {/* Sailboat */}
+          <picture>
+            <img
+              src="/sailboat.png"
+              alt="Sailboat"
+              className="absolute ocean-sailboat object-contain drop-shadow-md"
+              style={{ width: "32%", minWidth: "55px", maxWidth: "200px", left: "22%", bottom: "24%", rotate: "-3deg" }}
+            />
+          </picture>
+
+          {/* Seagulls */}
+          <svg className="absolute text-white opacity-40 ocean-seagull" style={{ width: "40px", top: "2%", left: "10%" }} viewBox="0 0 40 20">
+            <path d="M 0 10 Q 10 0 20 6 Q 30 0 40 10 Q 30 15 20 8 Q 10 15 0 10 Z" fill="black" />
+          </svg>
+          <svg className="absolute text-white opacity-30 ocean-seagull-delayed" style={{ width: "30px", top: "18%", left: "46%" }} viewBox="0 0 40 20">
+            <path d="M 0 10 Q 10 0 20 6 Q 30 0 40 10 Q 30 15 20 8 Q 10 15 0 10 Z" fill="grey" />
+          </svg>
+          <svg className="absolute text-white opacity-30 ocean-seagull-delayed" style={{ width: "30px", top: "25%", left: "45%" }} viewBox="0 0 40 20">
+            <path d="M 0 10 Q 10 0 20 6 Q 30 0 40 10 Q 30 15 20 8 Q 10 15 0 10 Z" fill="grey" />
+          </svg>
+          <svg className="absolute text-white opacity-30 ocean-seagull-delayed" style={{ width: "45px", top: "14%", left: "95%" }} viewBox="0 0 40 20">
+            <path d="M 0 10 Q 10 0 20 6 Q 30 0 40 10 Q 30 15 20 8 Q 10 15 0 10 Z" fill="black" />
+          </svg>
+        </div>
+      )
+      }
+    </div >
   );
 }

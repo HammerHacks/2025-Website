@@ -17,7 +17,7 @@ export default function Carousel() {
               src={img.src}
               alt={img.alt}
               loading="lazy"
-              className="h-[140px] w-auto rounded-2xl object-contain transition-shadow duration-300 hover:shadow-lg"
+              className="h-[140px] w-auto rounded-2xl object-contain transition-shadow duration-300 hover:shadow-lg border-2 border-blue-200"
               style={{ boxShadow: "var(--shadow-sm)" }}
             />
           </div>
