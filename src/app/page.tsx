@@ -16,7 +16,7 @@ export default function HomePage() {
       <Hero />
       <StatsBar />
       <About />
-      {/* <Schedule /> */}
+      <Schedule />
       <Recap />
       <Sponsors />
       <FAQ />

@@ -8,7 +8,7 @@
  */
 
 interface HillDividerProps {
-  variant?: "green-to-white" | "white-to-navy" | "navy-to-white" | "green-to-navy" | "offwhite-to-footer";
+  variant?: "green-to-white" | "white-to-navy" | "navy-to-white" | "green-to-navy" | "offwhite-to-footer" | "bottom-recap";
   flip?: boolean;
   className?: string;
 }
@@ -24,7 +24,7 @@ const VARIANTS = {
   },
   "navy-to-white": {
     bg: "transparent",
-    fills: ["#263262", "#2d3a6e", "#1F284F"],
+    fills: ["#263262", "#2d3a6e", "#263262"],
   },
   "green-to-navy": {
     bg: "transparent",
@@ -33,6 +33,10 @@ const VARIANTS = {
   "offwhite-to-footer": {
     bg: "#F8F9F0",
     fills: ["#263262", "#2d3a6e", "#263262"],
+  },
+  "bottom-recap": {
+    bg: "transparent",
+    fills: ["#263262", "#2d3a6e", "#1F284F"],
   },
 };
 
@@ -46,7 +50,7 @@ export default function HillDivider({
 
   return (
     <div
-      className={`relative w-full leading-none overflow-hidden ${className}`}
+      className={`relative z-20 w-full leading-none overflow-x-clip overflow-y-visible ${className}`}
       style={{
         background: bg,
         transform: flip ? "scaleY(-1)" : undefined,
@@ -155,14 +159,14 @@ export default function HillDivider({
 
       {/* Decorative Ocean Surface Elements */}
       {isOcean && !flip && (
-        <div className="absolute inset-0 pointer-events-none z-10 overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none z-10 overflow-visible">
           {/* Sailboat */}
           <picture>
             <img
               src="/sailboat.png"
               alt="Sailboat"
               className="absolute ocean-sailboat object-contain drop-shadow-md"
-              style={{ width: "32%", minWidth: "55px", maxWidth: "200px", left: "22%", bottom: "24%", rotate: "-3deg" }}
+              style={{ width: "32%", minWidth: "55px", maxWidth: "160px", left: "30%", bottom: "37%", rotate: "-3deg" }}
             />
           </picture>
 

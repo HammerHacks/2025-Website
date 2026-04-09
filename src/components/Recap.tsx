@@ -11,7 +11,7 @@ export default function Recap() {
   return (
     <>
       {/* Green-to-navy hill divider */}
-      <HillDivider variant="offwhite-to-footer" />
+      <HillDivider variant="navy-to-white" />
 
       <section
         className="relative pt-16 pb-10 text-white overflow-hidden"
@@ -105,7 +105,7 @@ export default function Recap() {
 
         <Carousel />
       </section>
-      <HillDivider variant="navy-to-white" flip={true} />
+      <HillDivider variant="bottom-recap" flip={true} />
     </>
   );
 }
