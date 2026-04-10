@@ -15,9 +15,9 @@ const baloo2 = Baloo_2({
 });
 
 export const metadata: Metadata = {
-  title: "HammerHacks II — Hamilton's High School Hackathon",
+  title: "HammerHacks II",
   description:
-    "Hamilton's largest high school hackathon. Build. Break. Bloom. Spring 2026 in Hamilton, Ontario.",
+    "Hamilton's largest high school hackathon. Build. Break. Bloom. May 23 at McMaster University",
 };
 
 export default function RootLayout({
