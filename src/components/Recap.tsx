@@ -11,7 +11,7 @@ export default function Recap() {
   return (
     <>
       {/* Green-to-navy hill divider */}
-      <HillDivider variant="navy-to-white" />
+      <HillDivider variant="offwhite-to-footer" />
 
       <section
         className="relative pt-16 pb-10 text-white overflow-hidden"
