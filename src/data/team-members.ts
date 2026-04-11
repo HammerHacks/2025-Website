@@ -56,6 +56,14 @@ export const TEAM_MEMBERS: TeamMember[] = [
         linkedin: "https://www.linkedin.com/in/gabriel-tsui/",
     },
     {
+        name: "Divyansh Shukla",
+        role: "Logistics Coordinator, Web Developer",
+        likes: "",
+        school: "",
+        photo: "logo.webp",
+        linkedin: "",
+    },
+    {
         name: "Joel Mathews",
         role: "Operations Lead",
         likes: "Likes → Pho and Iced Tea",
