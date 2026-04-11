@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Recap from "@/components/Recap";
 import Sponsors from "@/components/Sponsors";
+import Partners from "@/components/Partners";
 import FAQ from "@/components/FAQ";
 import Team from "@/components/Team";
 import Footer from "@/components/Footer";
@@ -15,6 +16,7 @@ export default function HomePage() {
       <About />
       <Recap />
       <Sponsors />
+      <Partners />
       <FAQ />
       <Team />
       <Footer />
