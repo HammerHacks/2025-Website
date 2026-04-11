@@ -14,13 +14,13 @@ function SponsorCard({
   link: string;
 }) {
 
-  // TODO: change height of sponsor cards based on tier once more sponsors arrive
+  
   const tierStyles = {
-    hammer: "h-28",
-    platinum: "h-28",
-    titanium: "h-28",
-    silver: "h-28",
-    aluminum: "h-28",
+    hammer: "h-34",
+    platinum: "h-34",
+    titanium: "h-30",
+    silver: "h-30",
+    aluminum: "h-26",
   }[tier];
 
   return (
@@ -81,11 +81,18 @@ export default function SponsorsSection() {
                 tier="titanium"
                 link="https://www.yubico.com/"
               />
+            
+              
             </div>
 
             {/* Silver sponsors: 3 per row capacity, centered */}
             <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
-
+               <SponsorCard
+                name="The Staircase"
+                image="/sponsors/theStaircase.jpg"
+                tier="silver"
+                link="https://staircasehamilton.com/"
+              />
             </div>
 
             {/* Aluminum sponsors: 4 per row capacity, centered */}
