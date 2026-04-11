@@ -40,7 +40,7 @@ export default function Footer() {
             website
           </a>{" "}
           and{" "}
-          <a href={SITE_CONFIG.hcbUrl} className="underline text-green-500">
+          <a href={SITE_CONFIG.hhHcbUrl} className="underline text-green-500">
             finances
           </a>{" "}
           are open
