@@ -1,15 +1,23 @@
 import type { Metadata } from "next";
-import { Nunito } from "next/font/google";
+import { Nunito, Baloo_2 } from "next/font/google";
 import "./globals.css";
 
 const nunito = Nunito({
-  weight: "500",
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
+  variable: "--font-body",
+});
+
+const baloo2 = Baloo_2({
+  weight: ["700", "800"],
+  subsets: ["latin"],
+  variable: "--font-display",
 });
 
 export const metadata: Metadata = {
-  title: "Hammer Hacks II",
-  description: "Hamilton's High School Hackathon",
+  title: "HammerHacks II",
+  description:
+    "Hamilton's largest high school hackathon. Build. Break. Bloom. May 23 at McMaster University",
 };
 
 export default function RootLayout({
@@ -19,7 +27,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${nunito.className} antialiased text-black`}>
+      <body
+        className={`${nunito.variable} ${baloo2.variable} ${nunito.className} antialiased`}
+        style={{ color: "var(--foreground)" }}
+      >
         {children}
       </body>
     </html>

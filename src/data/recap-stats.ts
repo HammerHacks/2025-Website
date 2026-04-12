@@ -4,7 +4,7 @@ export interface StatItem {
 }
 
 export const LEFT_STATS: StatItem[] = [
-  { value: "140", label: "hackers" },
+  { value: "140+", label: "hackers" },
   { value: "47", label: "projects" },
 ];
 
