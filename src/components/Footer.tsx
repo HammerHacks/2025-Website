@@ -66,9 +66,9 @@ export default function Footer() {
               <a href="#about" className="text-white/60 hover:text-white transition-colors text-sm">
                 About
               </a>
-              <a href="#schedule" className="text-white/60 hover:text-white transition-colors text-sm">
-                Schedule
-              </a>
+              {/*<a href="#schedule" className="text-white/60 hover:text-white transition-colors text-sm">
+              Schedule
+              </a>*/}
               <a href="#faq-section" className="text-white/60 hover:text-white transition-colors text-sm">
                 FAQ
               </a>
@@ -136,7 +136,7 @@ export default function Footer() {
             </p>
           </div>
         </div>
-      </footer>
+      </footer >
     </>
   );
 }

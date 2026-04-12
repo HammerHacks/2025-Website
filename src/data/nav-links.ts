@@ -15,4 +15,4 @@ export const DONATE_URL =
   "https://hcb.hackclub.com/donations/start/hammerhacks";
 
 export const REGISTER_URL =
-  "https://hcb.hackclub.com/donations/start/hammerhacks";
+  "https://hammerhacks.fillout.com/participant";
