@@ -58,7 +58,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     {
         name: "Divyansh Shukla",
         role: "Logistics Coordinator, Web Developer",
-        likes: "Likes → Ram prices, Soft robotics, Music (alto sax)",
+        likes: "Likes → Soft robotics, Music (alto sax)",
         school: "Grade 12 @ Orchard Park SS",
         photo: "/headshots/DivyanshShukla.jpg",
         linkedin: "",
