@@ -15,12 +15,14 @@ function SponsorCard({
   tier: "hammer" | "platinum" | "titanium" | "silver" | "aluminum";
   link: string;
 }) {
+
+
   const tierStyles = {
-    hammer: "h-40",
-    platinum: "h-40",
-    titanium: "h-36",
-    silver: "h-34",
-    aluminum: "h-32",
+    hammer: "h-34",
+    platinum: "h-34",
+    titanium: "h-30",
+    silver: "h-30",
+    aluminum: "h-26",
   }[tier];
 
   return (
@@ -66,26 +68,9 @@ export default function SponsorsSection() {
           Our Sponsors
         </h2>
 
-        <p className="text-lg md:text-xl text-gray-600 text-center max-w-2xl mx-auto mb-2">
-          Become a part of Hamilton&apos;s largest high school hackathon. Your
-          support helps inspire the next generation of innovators and leaders in
-          technology.
-        </p>
-
-        <p className="text-base md:text-lg text-gray-500 text-center max-w-2xl mx-auto">
-          Looking to make an impact? Email us at{" "}
-          <a
-            href={`mailto:${SITE_CONFIG.email}`}
-            className="font-semibold transition-colors"
-            style={{ color: "var(--orange)" }}
-          >
-            {SITE_CONFIG.email}
-          </a>
-        </p>
-
-        <div className="flex flex-col gap-8 mt-12">
-          {/* Titanium sponsors */}
-          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
+        <div className="flex flex-col gap-12 md:gap-2 mt-10">
+          {/* Titanium sponsors: 2 per row capacity, centered */}
+          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12">
             <SponsorCard
               name="Invest In Hamilton"
               image="/sponsors/investinhamilton.jpg"
@@ -98,15 +83,23 @@ export default function SponsorsSection() {
               tier="titanium"
               link="https://www.yubico.com/"
             />
+
+
           </div>
 
-          {/* Silver sponsors */}
-          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
-            {/* Placeholder for future sponsors */}
+          {/* Silver sponsors: 3 per row capacity, centered */}
+          <div className="flex flex-wrap items-center justify-center gap-6 md:gap-10">
+            <SponsorCard
+              name="The Staircase"
+              image="/sponsors/theStaircase.jpg"
+              tier="silver"
+              link="https://staircasehamilton.com/"
+            />
           </div>
 
-          {/* Aluminum sponsors */}
-          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6">
+          {/* Aluminum sponsors: 4 per row capacity, centered */}
+          {/*TODO: Update sponsor tiers once we get more sponsors.*/}
+          <div className="flex flex-wrap items-center justify-center gap-4 md:gap-8">
             <SponsorCard
               name="Best Buy"
               image="/sponsors/bestbuy.png"
@@ -121,16 +114,16 @@ export default function SponsorsSection() {
             />
           </div>
         </div>
+      </div>
 
-        {/* Become a Sponsor CTA */}
-        <div className="text-center mt-12">
-          <a
-            href={`mailto:${SITE_CONFIG.email}?subject=Sponsorship%20Inquiry%20-%20HammerHacks`}
-            className="btn-secondary text-base"
-          >
-            Become a Sponsor
-          </a>
-        </div>
+      {/* Become a Sponsor CTA */}
+      <div className="text-center mt-12">
+        <a
+          href={`mailto:${SITE_CONFIG.email}?subject=Sponsorship%20Inquiry%20-%20HammerHacks`}
+          className="btn-secondary text-base"
+        >
+          Become a Sponsor
+        </a>
       </div>
     </section>
   );
