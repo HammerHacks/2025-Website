@@ -45,9 +45,15 @@ export default function PartnerSection() {
     >
       <div className="w-full p-8">
         <div className="py-4">
-          <h3 className="text-5xl font-bold mb-6 text-center text-blue-900">
-            Our Partner
-          </h3>
+          <h2
+          className="text-3xl md:text-4xl font-bold mb-6 text-center"
+          style={{
+            color: "var(--navy)",
+            fontFamily: "var(--font-display)",
+          }}
+        >
+          Our Partner
+        </h2>
           
 
           <div className="flex flex-col gap-12 md:gap-2 mt-10">
