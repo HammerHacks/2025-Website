@@ -227,8 +227,8 @@ export default function FAQ() {
   return (
     <section
       ref={ref}
-      id="faq-section"
-      className={`faq-section flex flex-col items-center justify-center w-full py-16 md:py-24 px-6 scroll-reveal ${isVisible ? "visible" : ""}`}
+      id="faq"
+      className={`flex flex-col items-center justify-center w-full py-16 md:py-24 px-6 scroll-reveal ${isVisible ? "visible" : ""}`}
       style={{ background: "var(--off-white)" }}
     >
       <h2

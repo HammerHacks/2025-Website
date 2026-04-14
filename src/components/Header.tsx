@@ -20,7 +20,6 @@ export default function Header() {
   const handleNavClick = useCallback(
     (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
       if (!href.startsWith("#")) return;
-      e.preventDefault();
       const target = document.querySelector(href);
       target?.scrollIntoView({ behavior: "smooth" });
       setMobileOpen(false);

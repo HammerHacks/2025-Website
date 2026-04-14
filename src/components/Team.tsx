@@ -33,7 +33,7 @@ export default function Team() {
       ref={ref}
       className={`flex flex-col w-full items-center py-16 md:py-24 scroll-reveal ${isVisible ? "visible" : ""}`}
       style={{ background: "var(--off-white)" }}
-      id="team-section"
+      id="team"
     >
       {/* Description area */}
       <div className="w-full flex flex-col items-center justify-center mb-8 px-6">

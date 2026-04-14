@@ -70,7 +70,7 @@ export default function Hero() {
           </a>
           <a
             href="#recap"
-            className="btn-secondary text-lg md:text-xl"
+            className="btn-secondary text-lg md:text-xl text-navy"
           >
             {HERO_CONTENT.ctaSecondary}
           </a>
