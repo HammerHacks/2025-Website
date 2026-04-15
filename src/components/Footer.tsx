@@ -69,10 +69,10 @@ export default function Footer() {
               {/*<a href="#schedule" className="text-white/60 hover:text-white transition-colors text-sm">
               Schedule
               </a>*/}
-              <a href="#faq-section" className="text-white/60 hover:text-white transition-colors text-sm">
+              <a href="#faq" className="text-white/60 hover:text-white transition-colors text-sm">
                 FAQ
               </a>
-              <a href="#team-section" className="text-white/60 hover:text-white transition-colors text-sm">
+              <a href="#team" className="text-white/60 hover:text-white transition-colors text-sm">
                 Team
               </a>
               <a
