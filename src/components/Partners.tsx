@@ -10,13 +10,14 @@ function PartnerCard({
 }: {
   name: string;
   image: string;
-  tier: "partner";
+  tier: "partner" | "greenVenture";
   link: string;
 }) {
 
  
   const tierStyles = {
-    partner: "h-28",
+    partner: "h-30",
+    greenVenture: "h-36",
     
   }[tier];
 
@@ -52,7 +53,7 @@ export default function PartnerSection() {
             fontFamily: "var(--font-display)",
           }}
         >
-          Our Partner
+          Our Partners
         </h2>
           
 
@@ -60,13 +61,23 @@ export default function PartnerSection() {
             {/* Partner(s): 2 per row capacity, centered */}
             <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12">
               <PartnerCard
-                name=""
+                name="Mcmaster Engineering"
                 image="/sponsors/mcmasterENG.webp"
                 tier="partner"
                 link="https://www.eng.mcmaster.ca/"
               />
               
             </div>
+             <div className="flex flex-wrap items-center justify-center gap-6 md:gap-12">
+              <PartnerCard
+                name="Green Venture"
+                image="/sponsors/greenVenture.gif"
+                tier="greenVenture"
+                link="https://www.greenventure.ca/"
+              />
+              
+            </div>
+
 
            
           </div>
